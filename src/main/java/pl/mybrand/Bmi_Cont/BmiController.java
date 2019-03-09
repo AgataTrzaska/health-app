@@ -28,9 +28,4 @@ public class BmiController {
         modelMap.addAttribute("result",a);
         modelMap.addAttribute("result_info",cb.calcBmi(a));
         return "bmi";
-    }
-    @GetMapping("/style")
-    public String home2(){
-        return "style";
-    }
-}
+}}
