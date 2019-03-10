@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.awt.*;
+
 @Controller
 @EnableAutoConfiguration
 public class BmiController {
@@ -28,4 +30,5 @@ public class BmiController {
         modelMap.addAttribute("result",a);
         modelMap.addAttribute("result_info",cb.calcBmi(a));
         return "bmi";
-}}
+}
+}
