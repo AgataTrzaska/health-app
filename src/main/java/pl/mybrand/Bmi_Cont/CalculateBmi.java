@@ -1,11 +1,12 @@
 package pl.mybrand.Bmi_Cont;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.net.URL;
 
 public class CalculateBmi {
 
     public String calcBmi(float bmi) {
-
         if (bmi<16.00){
             return "Wygłodzenie";
         }else if (bmi>16.00 && bmi < 16.99) {
