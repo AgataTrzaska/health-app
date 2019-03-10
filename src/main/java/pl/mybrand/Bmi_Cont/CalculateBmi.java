@@ -7,7 +7,6 @@ public class CalculateBmi {
     public String calcBmi(float bmi) {
 
         if (bmi<16.00){
-            URL url = new URL("http://brzuchobrzucho.pl/wp-content/uploads/2017/08/wychudzenie-dolegliwosci-mogace-sie-pojawic-kazdym-wieku-678x381.jpg");
             return "Wygłodzenie";
         }else if (bmi>16.00 && bmi < 16.99) {
             return "Wychudzenie";
