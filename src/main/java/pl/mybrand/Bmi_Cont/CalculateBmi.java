@@ -1,9 +1,5 @@
 package pl.mybrand.Bmi_Cont;
 
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.net.URL;
-
 public class CalculateBmi {
 
     public String calcBmi(float bmi) {

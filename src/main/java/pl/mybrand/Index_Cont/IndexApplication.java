@@ -1,13 +1,13 @@
-package pl.mybrand.Bmi_Cont;
+package pl.mybrand.Index_Cont;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BmiApplication {
 
+public class IndexApplication {
     public static void main(String[] args) {
-        SpringApplication.run(BmiApplication.class, args);
-}
+        SpringApplication.run(IndexApplication.class, args);
+    }
 
 }
