@@ -4,168 +4,168 @@
     <meta charset="UTF-8">
     <title>Body Mass Index</title>
     <style>
-    body{
-    background-image: url("https://image.freepik.com/free-vector/sport-fitness-slimming-icons_3446-412.jpg");
-    }
-    h1{
-    background-color:lightsteelblue;
-    color:white;
-    text-aling:center;
-    padding:20px;
-    }
-    #nav{
-    background-color:pink;
-    color:white;
-    text-aling:center;
-    padding:10px;
-    }
-    .ani{
-        position: absolute;
-        background: rgba(204, 204, 204, 0.9);
-    color:black;
-    margin:10px;
-    padding:10px;
-    margin-left: 500px;
-    margin-right: 500px;
-    text-align:left;
-    border:5px rgba(204, 204, 204, 0.9);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    }
-    .side{
-        position: absolute;
-        background: rgba(204, 204, 204, 0.9);
-    color:black;
-    margin:10px;
-    margin-left: 50px;
-    width:370px;
-    float:left;
-    padding:20px;
-    border:5px rgba(204, 204, 204, 0.9);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    }
-    .right{
-    position: absolute;
-    top:170px;
-    left:900px;
-    background: rgba(204, 204, 204, 0.9);
-    color:black;
-    /*margin:-310px;*/
-    /*margin-left: 900px;*/
-    width:370px;
-    float:left;
-    padding:10px;
-    border:5px rgba(204, 204, 204, 0.9);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    }
-    .myButton {
-    -moz-box-shadow:inset 0px 1px 0px 0px #f7c5c0;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #f7c5c0;
-    box-shadow:inset 0px 1px 0px 0px #f7c5c0;
-    background-color:#fc8d83;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:6px;
-    border:1px solid #d83526;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:6px 24px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #b23e35;
-    }
+        body{
+            background-image: url("https://image.freepik.com/free-vector/sport-fitness-slimming-icons_3446-412.jpg");
+        }
+        h1{
+            background-color:lightsteelblue;
+            color:white;
+            text-aling:center;
+            padding:20px;
+        }
+        #nav{
+            background-color:pink;
+            color:white;
+            text-aling:center;
+            padding:10px;
+        }
+        .ani{
+            position: absolute;
+            background: rgba(204, 204, 204, 0.9);
+            color:black;
+            margin:10px;
+            padding:10px;
+            margin-left: 500px;
+            margin-right: 500px;
+            text-align:left;
+            border:5px rgba(204, 204, 204, 0.9);
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .side{
+            position: absolute;
+            background: rgba(204, 204, 204, 0.9);
+            color:black;
+            margin:10px;
+            margin-left: 50px;
+            width:370px;
+            float:left;
+            padding:20px;
+            border:5px rgba(204, 204, 204, 0.9);
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .right{
+            position: absolute;
+            top:170px;
+            left:900px;
+            background: rgba(204, 204, 204, 0.9);
+            color:black;
+            /*margin:-310px;*/
+            /*margin-left: 900px;*/
+            width:370px;
+            float:left;
+            padding:10px;
+            border:5px rgba(204, 204, 204, 0.9);
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .myButton {
+            -moz-box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+            -webkit-box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+            box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+            background-color:#fc8d83;
+            -moz-border-radius:6px;
+            -webkit-border-radius:6px;
+            border-radius:6px;
+            border:1px solid #d83526;
+            display:inline-block;
+            cursor:pointer;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #b23e35;
+        }
     </style>
 </head>
 <body>
-    <h1 style="text-align:center">Kalkulator BMI</h1>
-    <form action="/" method="post">
+<h1 style="text-align:center">Kalkulator BMI</h1>
+<form action="/" method="post">
     <div id="nav">
-    <a th:href="@{kcal}">kcal</a>
+        <a th:href="@{kcal}">kcal</a>
         <A HREF="https://www.wp.pl/">Go to the Home Page2</A></div>
-<div class="side">
-    <script type="text/javascript">
-        function ne(o){
-            if(document.getElementById(o).style.display=='') document.getElementById(o).style.display = 'none';
-            else document.getElementById(o).style.display='';
-        }
-    </script>
+    <div class="side">
+        <script type="text/javascript">
+            function ne(o){
+                if(document.getElementById(o).style.display=='') document.getElementById(o).style.display = 'none';
+                else document.getElementById(o).style.display='';
+            }
+        </script>
 
-    <div class="myButton"><div onclick="ne('o1')">Czym jest BMI?</div></div>
-    <div id="o1" style="display:none;">
-        <p></p>
-        Jest to wskaźnik masy ciała (z angielskiego: body mass index, BMI). Oblicza się go
-        przez podzielenie masy ciała - podanej w kologramach, przez kwadrat wyokości podany w metrach. Klasyfikacja
-        (zakres wartości) wskaźnika BMI została opracowana <strong>wyłącznie</strong> dla dorosłych i nie może
-        być stosowana u dzieci.
-        Oznaczanie wskaźnika masy ciała ma znaczenie w ocenie zagrożenia chorobami związanymi z nadwagą i otyłością,
-        np. cukrzycą, chorobą niedokrwienną serca, miażdżycą. Podwyższona wartość BMI związana jest ze zwiększonym
+        <div class="myButton"><div onclick="ne('o1')">Czym jest BMI?</div></div>
+        <div id="o1" style="display:none;">
+            <p></p>
+            Jest to wskaźnik masy ciała (z angielskiego: body mass index, BMI). Oblicza się go
+            przez podzielenie masy ciała - podanej w kologramach, przez kwadrat wyokości podany w metrach. Klasyfikacja
+            (zakres wartości) wskaźnika BMI została opracowana <strong>wyłącznie</strong> dla dorosłych i nie może
+            być stosowana u dzieci.
+            Oznaczanie wskaźnika masy ciała ma znaczenie w ocenie zagrożenia chorobami związanymi z nadwagą i otyłością,
+            np. cukrzycą, chorobą niedokrwienną serca, miażdżycą. Podwyższona wartość BMI związana jest ze zwiększonym
             ryzykiem wystąpienia takich chorób.
-    </div>
-    <p></p>
-    <div class="myButton"><div onclick="ne('o2')">Zakresy wartości BMI</div></div>
-    <div id="o2" style="display:none;">
-        <p></p>
-        <ul>
-            <li>16,0 – wygłodzenie</li>
-            <li>16,0–16,99 – wychudzenie</li>
-            <li>17,0–18,49 – niedowagę</li>
-            <li>18,5–24,99 – wartość prawidłową</li>
-            <li>25,0–29,99 – nadwagę</li>
-            <li>30,0–34,99 – I stopień otyłości</li>
-            <li>35,0–39,99 – II stopień otyłości (otyłość kliniczna)</li>
-            <li>≥ 40,0 – III stopień otyłości (otyłość skrajna)</li>
-        </ul>
-    </div>
-    <p></p>
-    <div class="myButton"><div onclick="ne('o3')">Interpretacja wskaźnika BMI</div></div>
-    <div id="o3" style="display:none;">
-        <p></p>
-        BMI jest bardzo prosty w użyciu, jednak nie uwzględnia on indywidualnej budowy ciała.
-        Jest dosyć niedokładnym wskaźnikiem niedowagi i nadwagi oraz ryzyk chorób z nimi związanych. Kulturyści mogą mieć BMI
-        wskazujące na skrajną otyłość, posiadając jednocześnie bardzo mało tkanki tłuszczowej. Z drugiej strony, BMI zupełnie
-        zdrowych, szczupłych i wysokich lekkoatletów może wskazywać na skrajną niedowagę. Związek między wielkością wskaźnika a
-        ryzykiem chorób różni się między populacjami o różnych proporcjach ciała. I tak wśród Azjatów ryzyko cukrzycy jest
-        znacząco wyższe przy niższych wartościach BMI. Zawartość tłuszczu w organizmie jest też wyższa u kobiet, niż u
-        mężczyzn przy normalnej masie ciała. W przypadku kobiet tkanka tłuszczowa odpowiada za płodność i dojrzewanie płciowe.
-    </div>
-</span>
-</div>
-
-<div class="ani">
-    <strong><p style="text-align:center">Oblicz swoje BMI</p></strong>
-
-    <form action="/" method="post">
-        <strong><p>Wybierz płeć:</p></strong>
-<select>
-    <option value="Kobieta" name="sex">Kobieta</option>
-    <option value="Mezczyzna">Mężczyzna</option>
-</select>
-        <p class="one"></p>
-        <p><strong>Podaj wzrost w centymentarch i wagę w kilogramach:</strong></p>
-        <strong> Wzrost:&nbsp;</strong><input type="text" placeholder="Wpisz wzrost" name="height" size="9" ><br>
-        <p class="one"></p>
-        <strong>Waga: &nbsp; &nbsp;</strong><input type="text" placeholder="Wpisz wagę" name="weight" size="9" ><br>
-        <p class="one"></p>
-        <div><input value="Oblicz" type="submit" name="calculate" class="myButton"></div>
-        <p></p>
         </div>
+        <p></p>
+        <div class="myButton"><div onclick="ne('o2')">Zakresy wartości BMI</div></div>
+        <div id="o2" style="display:none;">
+            <p></p>
+            <ul>
+                <li>16,0 – wygłodzenie</li>
+                <li>16,0–16,99 – wychudzenie</li>
+                <li>17,0–18,49 – niedowagę</li>
+                <li>18,5–24,99 – wartość prawidłową</li>
+                <li>25,0–29,99 – nadwagę</li>
+                <li>30,0–34,99 – I stopień otyłości</li>
+                <li>35,0–39,99 – II stopień otyłości (otyłość kliniczna)</li>
+                <li>≥ 40,0 – III stopień otyłości (otyłość skrajna)</li>
+            </ul>
+        </div>
+        <p></p>
+        <div class="myButton"><div onclick="ne('o3')">Interpretacja wskaźnika BMI</div></div>
+        <div id="o3" style="display:none;">
+            <p></p>
+            BMI jest bardzo prosty w użyciu, jednak nie uwzględnia on indywidualnej budowy ciała.
+            Jest dosyć niedokładnym wskaźnikiem niedowagi i nadwagi oraz ryzyk chorób z nimi związanych. Kulturyści mogą mieć BMI
+            wskazujące na skrajną otyłość, posiadając jednocześnie bardzo mało tkanki tłuszczowej. Z drugiej strony, BMI zupełnie
+            zdrowych, szczupłych i wysokich lekkoatletów może wskazywać na skrajną niedowagę. Związek między wielkością wskaźnika a
+            ryzykiem chorób różni się między populacjami o różnych proporcjach ciała. I tak wśród Azjatów ryzyko cukrzycy jest
+            znacząco wyższe przy niższych wartościach BMI. Zawartość tłuszczu w organizmie jest też wyższa u kobiet, niż u
+            mężczyzn przy normalnej masie ciała. W przypadku kobiet tkanka tłuszczowa odpowiada za płodność i dojrzewanie płciowe.
+        </div>
+        </span>
+    </div>
 
-<div class="right">
-    <strong><p style="text-align:center">Twoje BMI wynosi:</p></strong>
-    <p type="text" th:text="${result}">
-    <p type="text" th:text="${result_info}"  >
-</div>
+    <div class="ani">
+        <strong><p style="text-align:center">Oblicz swoje BMI</p></strong>
+
+        <form action="/" method="post">
+            <strong><p>Wybierz płeć:</p></strong>
+            <select>
+                <option value="Kobieta" name="sex">Kobieta</option>
+                <option value="Mezczyzna">Mężczyzna</option>
+            </select>
+            <p class="one"></p>
+            <p><strong>Podaj wzrost w centymentarch i wagę w kilogramach:</strong></p>
+            <strong> Wzrost:&nbsp;</strong><input type="text" placeholder="Wpisz wzrost" name="height" size="9" ><br>
+            <p class="one"></p>
+            <strong>Waga: &nbsp; &nbsp;</strong><input type="text" placeholder="Wpisz wagę" name="weight" size="9" ><br>
+            <p class="one"></p>
+            <div><input value="Oblicz" type="submit" name="calculate" class="myButton"></div>
+            <p></p>
+    </div>
+
+    <div class="right">
+        <strong><p style="text-align:center">Twoje BMI wynosi:</p></strong>
+        <p type="text" th:text="${result}">
+        <p type="text" th:text="${result_info}"  >
+    </div>
 </form>
 </body>
 </html>
