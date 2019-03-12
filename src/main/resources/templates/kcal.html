@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{bmi}">bmi</a>
+
+<strong><p style="text-align:center">Oblicz swoje kcal</p></strong>
+
+<form action="/" method="post">
+    <strong><p>Wybierz płeć:</p></strong>
+    <select name="sex">
+        <option value="Woman" type="text" >Kobieta</option>
+        <option value="Man" type="text" >Mężczyzna</option>
+    </select>
+    <p class="one"></p>
+    <p><strong>Podaj wzrost w centymentarch i wagę w kilogramach:</strong></p>
+    <strong> Wzrost:&nbsp;</strong><input type="text" placeholder="Wpisz wzrost" name="height" size="9" ><br>
+    <p class="one"></p>
+    <strong>Waga: &nbsp; &nbsp;</strong><input type="text" placeholder="Wpisz wagę" name="weight" size="9" ><br>
+    <p class="one"></p>
+    <strong>Wiek: &nbsp; &nbsp;</strong><input type="text" placeholder="Wpisz wagę" name="age" size="9" ><br>
+    <p class="one"></p>
+    <div><input value="Oblicz" type="submit" name="calculate" class="myButton"></div>
+    <p></p>
+    </div>
+
+    <div class="right">
+        <strong><p style="text-align:center">Twoje Kcal wynosi:</p></strong>
+        <script type="text/javascript">
+
+        </script>
+        <p type="text" th:if="${resultW}" th:text="${resultW}">
+        <p type="text" th:if="${resultM}" th:text="${resultM}">
+    </div>
+</form>
+</body>
+</html>
