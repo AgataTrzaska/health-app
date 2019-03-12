@@ -1,14 +1,12 @@
 package pl.mybrand.Bmi_Cont;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+import pl.mybrand.Bmi_Cont.CalculateBmi;
 
-import java.awt.*;
 
 @Controller
-@EnableAutoConfiguration
 public class BmiController {
 
     CalculateBmi cb = new CalculateBmi();
