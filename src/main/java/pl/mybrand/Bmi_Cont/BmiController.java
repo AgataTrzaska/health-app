@@ -14,12 +14,13 @@ public class BmiController {
     CalculateBmi cb = new CalculateBmi();
 
     @GetMapping("/bmi")
-    public String home(ModelMap modelMap) {
+    public String home2(ModelMap modelMap) {
         modelMap.addAttribute("result","");
         return "bmi";
     }
 
     @RequestMapping (method = RequestMethod.POST)
+    //@RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST})
     public String getResult(@RequestParam Integer weight,
                             @RequestParam Integer height,
                             ModelMap modelMap){

@@ -1,4 +1,4 @@
-package pl.mybrand.Kcal_Cont;
+package pl.mybrand.Bmi_Cont;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import pl.mybrand.Kcal_Cont.CalculateKcal;
 
 @Controller
-@EnableAutoConfiguration
 public class KcalController {
 
     CalculateKcal kc = new CalculateKcal();
@@ -20,7 +20,8 @@ public class KcalController {
         modelMap.addAttribute("result2","");
         return "kcal";
     }
-    @RequestMapping(method = RequestMethod.POST)
+//    @RequestMapping(method = RequestMethod.POST)
+    //@RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST})
     public String getResult(@RequestParam Integer weight,
                             @RequestParam Integer height,
                             @RequestParam Integer age,
