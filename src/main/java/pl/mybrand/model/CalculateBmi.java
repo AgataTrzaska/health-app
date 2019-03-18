@@ -1,4 +1,4 @@
-package pl.mybrand.Bmi_Cont;
+package pl.mybrand.model;
 
 public class CalculateBmi {
 

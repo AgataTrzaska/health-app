@@ -2,43 +2,119 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Zapotrzebowanie kaloryczne</title>
-    <link rel="stylesheet" type="text/css" href="/kcalstyle.css" media="screen" />
-
-
-    <!--link rel="stylesheet" href="kcalstyle.css"-->
+    <title>Kalkulator kalorii</title>
+    <link rel="stylesheet" type="text/css" href="style.css?version=214">
 </head>
 <body>
-<a th:href="@{bmi}">Oblicz BMI</a>
+<div id="header">
+    <h1>Kalkulator Kalorii</h1>
+</div>
 
-<strong><p style="text-align:center">Oblicz swoje kcal</p></strong>
+<div id="nav">
+    <a th:href="@{/}" class="myButton">Kalkulator BMI</a>
+</div>
 
-<form action="/" method="post">
-    <strong><p>Wybierz płeć:</p></strong>
-    <select name="sex">
-        <option value="Woman" type="text" >Kobieta</option>
-        <option value="Man" type="text" >Mężczyzna</option>
-    </select>
-    <p class="one"></p>
-    <p><strong>Podaj wzrost w centymentarch i wagę w kilogramach:</strong></p>
-    <strong> Wzrost:&nbsp;</strong><input type="text" placeholder="Wpisz wzrost" name="height" size="9" ><br>
-    <p class="one">bbbb</p>
-    <strong>Waga: &nbsp; &nbsp;</strong><input type="text" placeholder="Wpisz wagę" name="weight" size="9" ><br>
-    <p class="one">aaa</p>
-    <strong>Wiek: &nbsp; &nbsp;</strong><input type="text" placeholder="Wpisz wagę" name="age" size="9" ><br>
-    <p class="one">ccc</p>
-    <div><input value="Oblicz" type="submit" name="calculate" class="myButton"></div>
-    <p></p>
-    </div>
-
-    <div class="right">
-        <strong><p style="text-align:center">Twoje Kcal wynosi:</p></strong>
+<div id="grid">
+    <div id="item1">
         <script type="text/javascript">
-
+            function ne(o) {
+                if (document.getElementById(o).style.display == '') document.getElementById(o).style.display = 'none';
+                else document.getElementById(o).style.display = '';
+            }
         </script>
-        <p type="text" th:if="${resultW}" th:text="${resultW}">
-        <p type="text" th:if="${resultM}" th:text="${resultM}">
+
+        <br>
+        <div class="myButton2">
+            <div onclick="ne('o1')">Dzienne zapotrzebowanie energetyczne</div>
+        </div>
+
+        <div id="o1" style="display:none;">
+            <p></p>
+            <p id="text">oznacza ilość energii, którą należy dostarczyć każdego dnia organizmowi w pożywieniu, aby
+                pokryć wydatki
+                energetyczne wynikające z:
+            <ul>
+                <li>podstawowej przemiany materii, na którą składają się procesy fizjologiczne tj. trawienie,
+                    oddychanie, krążenie, odnowa
+                    komórek i tkanek, itp.
+                </li>
+
+                <li>aktywności fizycznej</li>
+                Dzienne zapotrzebowanie energetyczne podaje się najczęściej w kcal lub rzadziej w kilodżulach.
+                Dostarczanie organizmowi
+                odpowiedniej ilości (oraz jakości) pożywienia, które pokrywa dzienne zapotrzebowanie energetyczne, lecz
+                go nie przewyższa,
+                jest warunkiem utrzymania stałej i prawidłowej masy ciała.
+            </p>
+            </ul>
+        </div>
+
+        <p></p>
+
+        <div class="myButton2">
+            <div onclick="ne('o2')">Dzienne zapotrzebowanie energetyczne zależy od:</div>
+        </div>
+        <div id="o2" style="display:none;">
+            <p></p>
+            <ul>
+                <li>indywidualnego tempa metabolizmu</li>
+                <li>masy ciała</li>
+                <li>wzrostu</li>
+                <li>wieku</li>
+                <li>płci</li>
+                <li>poziomu aktywności fizycznej</li>
+            </ul>
+        </div>
+
+        <p></p>
+
+        <div class="myButton2">
+            <div onclick="ne('o3')" text-align="center">Średnie dzienne zapotrzebowanie energetyczne</div>
+        </div>
+        <div id="o3" style="display:none;">
+            <p></p>
+            <p id="text">Dla osób o umiarkowanej aktywności fizycznej:
+            <ul>
+                <li>2000 kcal dla kobiety</li>
+                <li>2500 kcal dla mężczyzny</li>
+            </ul>
+            </p>
+        </div>
+        <p></p>
+        <div class="myButton2">
+            <div onclick="ne('o4')" text-align="center">Pamiętaj!</div>
+        </div>
+        <div id="o4" style="display:none;">
+            <p></p>
+            <p id="text">Każdy organizm jest inny! Podane przez kalkulator kalorii wartości mają charakter orientacyjny
+                i pomocniczy.
+                Żadne narzędzie nie zastąpi konsultacji ze specjalistą! Zamieszczone informacje nie mogą być podstawą do
+                przeprowadzenia
+                samodiagnozy czy leczenia.</p>
+        </div>
     </div>
-</form>
+    <div id="item2">
+        <form action="kcal" method="post">
+            <strong><p id="text2">Oblicz dzienne zapotrzebowanie na kalorie:</p></strong>
+            <p></p>
+            <strong>Wybierz płeć: </strong><input type="radio" value="Woman" name="sex">Kobieta</input>
+            <input type="radio" value="Man" name="sex">Mężczyzna</input>
+            <p></p>
+            <strong>Wzrost:&nbsp;</strong><input type="text" placeholder="Wpisz wzrost" name="height" size="9"><br>
+            <p></p>
+            <strong>Waga: &nbsp; &nbsp;</strong><input type="text" placeholder="Wpisz wagę" name="weight" size="9"><br>
+            <p></p>
+            <strong>Wiek: &nbsp; &nbsp;</strong><input type="text" placeholder="Wpisz wiek" name="age" size="9"><br>
+            <p></p>
+            <div><input value="Oblicz" type="submit" name="calculate" class="myButton"></div>
+            <p></p>
+    </div>
+        <div id="item3">
+            <strong><p id="text2">Twoje Kcal wynosi:</p></strong>
+            <p type="text" th:if="${kcalW}" th:text="${kcalW}">
+            <p type="text" th:if="${kcalM}" th:text="${kcalM}">
+            </div>
+    </form>
+</div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package pl.mybrand.Kcal_Cont;
+package pl.mybrand.model;
 
 public class CalculateKcal {
 
