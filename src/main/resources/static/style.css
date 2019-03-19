@@ -27,6 +27,7 @@ body {
     position: relative;
     top: 1px;
 }
+
 .myButton2 {
     -moz-box-shadow: inset 1px 0px 0px -3px #f7c5c0;
     -webkit-box-shadow: inset 1px 0px 0px -3px #f7c5c0;
@@ -52,100 +53,98 @@ body {
     position: relative;
     top: 1px;
 }
-#header {
-    display: block;
-    background-attachment: fixed;
-    color: white;
-    family-font: "Times New Roman", Times, serif;
-    font-size: 10pt;
-    text-align: center;
-    font-weight: bold;
-    background-color: lightsteelblue;
-    padding: 10px;
-    margin-left: 1.5cm;
-    margin-right: 1.5cm;
-    magin-top: 1.5cm;
-    margin-bottom: 0cm;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    box-sizing: inherit;
+
+.grid-container {
+    display: grid;
+    grid-template-areas: "header header header" "nav nav nav" "left center right";
+    grid-gap: 0px 50px;
 }
 
-#nav {
+.header {
+
+    grid-area: header;
+    background-color: lightsteelblue;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+}
+
+.nav {
+
+    color: #fff;
+    grid-area: nav;
     background-color: #f9c0f9;
     text-align: center;
     padding: 10px;
-    margin-left: 1.5cm;
-    margin-right: 1.5cm;
-    magin-top: 1.5cm;
-    margin-bottom: 0cm;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-}
-
-#grid {
-    display: grid;
-    grid-template-columns: 500px 500px 350px;
+    margin-bottom: 20px;
 
 }
 
-#item1 {
+.left {
+    grid-area: left;
     family-font: "Times New Roman", Times, serif;
     background: rgba(204, 204, 204, 0.7);
     color: black;
     text-align: center;
     text-align: justify;
     padding: 10px;
-    margin-left: 1.5cm;
-    margin-right: 0.5cm;
-    margin-top: 0.5cm;
     border: 0.5px rgba(204, 204, 204, 0.7);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+    width: 500px;
 }
 
-#item2 {
+.center {
+    grid-area: center;
     family-font: "Times New Roman", Times, serif;
     background: rgba(204, 204, 204, 0.7);
     color: black;
     text-align: center;
     padding: 10px;
-    margin-left: 0.5cm;
-    margin-right: 0.5cm;
-    margin-top: 0.5cm;
     border: 5px rgba(204, 204, 204, 0.7);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    max-height: 250px;
+    max-height: 255px;
+    width:400px;
 }
 
-#item3 {
+.right {
+    grid-area: right;
     family-font: "Times New Roman", Times, serif;
     background: rgba(204, 204, 204, 0.7);
     color: black;
     text-align: center;
     padding: 5px;
-    margin-left: 0.5cm;
-    margin-right: 1.5cm;
-    margin-top: 0.5cm;
     border: 5px rgba(204, 204, 204, 0.7);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    grid-auto-flow: dense;
     max-height: 150px;
+    width: 300px;
 }
+
 #text {
     padding: 15px;
     padding-left: 15px;
 }
-#text2{
+
+#text2 {
     font-size: 15pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+h1{
+    color: white;
+    family-font: "Times New Roman", Times, serif;
+    font-size: 25pt;
     text-align: center;
     font-weight: bold;
 }

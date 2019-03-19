@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Body Mass Index</title>
-    <link rel="stylesheet" type="text/css" href="style.css?version=153">
+    <link rel="stylesheet" type="text/css" href="style.css?version=160">
 </head>
 <body>
-<div id="header">
-    <h1>Kalkulator BMI</h1>
-</div>
+<div class="grid-container">
+    <div class="header">
+        <h1>Kalkulator BMI</h1>
+    </div>
 
-<div id="nav">
-    <a th:href="@{kcal}" class="myButton">Kalkulator kalorii</a>
-</div>
-<!--div class="a"-->
-<div id="grid">
-    <div id="item1">
+
+    <div class="nav">
+        <a th:href="@{kcal}" class="myButton">Kalkulator kalorii</a>
+    </div>
+    <!--div class="a"-->
+
+    <div class="left">
         <script type="text/javascript">
             function ne(o) {
                 if (document.getElementById(o).style.display == '') document.getElementById(o).style.display = 'none';
@@ -110,7 +112,7 @@
                 jako wskaźnik BMI.</p>
         </div>
     </div>
-    <div id="item2">
+    <div class="center">
         <strong><p id="text2">Oblicz BMI</p></strong>
         <form action="/bmii" method="post">
 
@@ -129,7 +131,7 @@
             <div><input value="Oblicz" type="submit" name="calculate" class="myButton2"></div>
             <p></p>
     </div>
-    <div id="item3">
+    <div class="right">
         <strong><p id="text2">Twoje BMI wynosi:</p></strong>
         <p type="text" th:text="${result}">
         <p type="text" th:text="${result_info}">

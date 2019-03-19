@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Kalkulator kalorii</title>
-    <link rel="stylesheet" type="text/css" href="style.css?version=214">
+    <link rel="stylesheet" type="text/css" href="style.css?version=301">
 </head>
 <body>
-<div id="header">
+<div class="grid-container">
+    <div class="header">
     <h1>Kalkulator Kalorii</h1>
 </div>
 
-<div id="nav">
+    <div class="nav">
     <a th:href="@{/}" class="myButton">Kalkulator BMI</a>
 </div>
-
-<div id="grid">
-    <div id="item1">
+    <div class="left">
         <script type="text/javascript">
             function ne(o) {
                 if (document.getElementById(o).style.display == '') document.getElementById(o).style.display = 'none';
@@ -93,7 +92,7 @@
                 samodiagnozy czy leczenia.</p>
         </div>
     </div>
-    <div id="item2">
+    <div class="center">
         <form action="kcal" method="post">
             <strong><p id="text2">Oblicz dzienne zapotrzebowanie na kalorie:</p></strong>
             <p></p>
@@ -109,7 +108,7 @@
             <div><input value="Oblicz" type="submit" name="calculate" class="myButton"></div>
             <p></p>
     </div>
-        <div id="item3">
+    <div class="right">
             <strong><p id="text2">Twoje Kcal wynosi:</p></strong>
             <p type="text" th:if="${kcalW}" th:text="${kcalW}">
             <p type="text" th:if="${kcalM}" th:text="${kcalM}">
