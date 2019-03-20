@@ -9,7 +9,7 @@
         <version>2.1.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>package pl.mybrand</groupId>
+    <groupId>pl.mybrand</groupId>
     <artifactId>Bmi_Cont</artifactId>
     <version>Bmi_Cont</version>
     <description>Demo project for Spring Boot</description>
